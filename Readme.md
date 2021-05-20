@@ -1,5 +1,5 @@
-#Conhecendo um pouco mais sobre o GIT
-##GIT
+# Conhecendo um pouco mais sobre o GIT
+#GIT
 
 - O que é git
 - Como funciona o git
@@ -79,6 +79,7 @@ git branch -d <nome da branch>
 git push --set-upstream origin <nome da branch>
 
 ``` 
+Obs: O Git informa o comando correto ao digitar somente git push. Não se preocupe :P
 #### Preparar commit
 ```
 git add ...
