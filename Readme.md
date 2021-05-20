@@ -1,5 +1,5 @@
-
-#GIT
+#Conhecendo um pouco mais sobre o GIT
+##GIT
 
 - O que é git
 - Como funciona o git
