@@ -4,6 +4,10 @@ import br.com.letscode.dominio.Conta;
 import br.com.letscode.dominio.ContaEspecial;
 import br.com.letscode.dominio.ContaPoupanca;
 import br.com.letscode.dominio.Pessoa;
+import br.com.letscode.exception.AutenticacaoException;
+import br.com.letscode.exception.SaldoInsuficienteException;
+
+import java.math.BigDecimal;
 
 public class MainContas {
 
@@ -14,9 +18,19 @@ public class MainContas {
         Pessoa pessoa = new Pessoa("Cinthia");
         pessoa.setContas(contas);
 
-        //TODO imprimir o saldo de cada conta;
 
-        contas[0].imprimir();
+        try {
+            for (int i = 0; i < pessoa.getContas().length; i++) {
+                Conta conta = pessoa.getContas()[i];
+                conta.depositar(new BigDecimal(100));
+                conta.sacar(new BigDecimal(150));
+                conta.depositar(new BigDecimal(200));
+                System.out.println(conta.imprimir());
+            }
+        }catch (AutenticacaoException | SaldoInsuficienteException exception){
+            exception.printStackTrace();
+            System.err.println("Error "+exception.getMessage());
+        }
 
 
 
