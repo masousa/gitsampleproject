@@ -18,6 +18,7 @@
 - Branch nada mais é que um ponteiro baseado em um momento do projeto GIT
 - Existe uma branch master no seu projeto inicial.
 
+Fluxo de branches (ramos)
 ![Imagem Branch](src/main/resources/img.png)
 
 ### E como é o funcionamento diário com GIT
